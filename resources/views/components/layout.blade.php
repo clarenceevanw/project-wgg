@@ -176,7 +176,7 @@
 
     <footer class="border-t border-gray-800 bg-black/50 backdrop-blur-xl">
         <div class="credit">
-            <p>Created by <a href="">clarenceevanw</a>. | &copy; 2025</p>
+            <p>Created by <a href="https://github.com/clarenceevanw/">clarenceevanw</a>. | &copy; 2025</p>
         </div>
     </footer>
 
