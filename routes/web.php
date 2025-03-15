@@ -15,9 +15,9 @@ Route::middleware('guest')->group(function () {
     Route::post('/login/auth', [UserController::class, 'login'])->name('login.auth');
 });
 
-Route::get('/cards/manage', [CardController::class, 'manage'])->name('cards.manage');
 
 Route::middleware('auth')->group(function () {
+    Route::get('/cards/manage', [CardController::class, 'manage'])->name('cards.manage');
     Route::get('/cards/create', [CardController::class, 'create']);
     Route::post('/cards/store', [CardController::class, 'store'])->name('cards.store');
     Route::get('/cards/{card}/edit', [CardController::class, 'edit'])->name('cards.edit');
