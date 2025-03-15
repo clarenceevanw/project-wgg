@@ -66,14 +66,18 @@
                     },
                     error: function (xhr) {
                         let errorMessage = "An error occurred!";
-                        if (xhr.responseJSON && xhr.responseJSON.message) {
+                        if (xhr.responseJSON && xhr.responseJSON.errors) {
+                            errorMessage = Object.values(xhr.responseJSON.errors).flat().join("<br>");
+                        } else if (xhr.responseJSON && xhr.responseJSON.message) {
                             errorMessage = xhr.responseJSON.message;
+                        } else {
+                            errorMessages.push("An error occurred!");
                         }
 
                         Swal.fire({
                             icon: "error",
                             title: "Oops!",
-                            text: errorMessage,
+                            html: errorMessage,
                             confirmButtonColor: "#d33"
                         });
                     }
