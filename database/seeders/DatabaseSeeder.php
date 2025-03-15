@@ -21,7 +21,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]);
         // Card::factory(10)->create();
-        Card::factory(10)->create([
+        Card::factory(24)->create([
             'users_id' => $user->id
         ]);
     }
