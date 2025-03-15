@@ -66,6 +66,23 @@
             cursor: pointer;
         }
 
+        footer{
+            text-align: center;
+            padding: 1rem 0 1.8rem;
+            margin-top: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer .credit {
+            font-size: .8rem;
+        }
+        footer .credit a{
+            color: #f6a868;
+            font-weight: 700;
+        }
+
         @media (max-width:768px){
             html{
                 font-size: 75%;
@@ -157,6 +174,11 @@
         {{ $slot }}
     </main>
 
+    <footer class="border-t border-gray-800 bg-black/50 backdrop-blur-xl">
+        <div class="credit">
+            <p>Created by <a href="">clarenceevanw</a>. | &copy; 2025</p>
+        </div>
+    </footer>
 
     <script>
         feather.replace();
