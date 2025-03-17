@@ -42,6 +42,7 @@
             </tbody>
         </table>
     </div>
+    @if(count($cards) > 0)
     <script>
         $(document).ready(function () {
             $('#delete-form-{{ $card->id }}').on('submit', function (event) {
@@ -105,4 +106,5 @@
             });
         });
     </script>
+    @endif
 </x-layout>
